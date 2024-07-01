@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* buttons classes */
+    .button {
+      @apply inline-flex cursor-pointer justify-center items-center text-[18px] font-semibold gap-1 px-4 py-3 rounded-lg leading-[24px];
+    }
+  
+    .button-primary {
+      @apply bg-primary-main text-white;
+    }
+  
+    .button-primary:hover {
+      @apply bg-primary-dark;
+    }
+  
+    .button-primary:focus {
+      @apply ring ring-offset-0 ring-primary-dark;
+    }
+  
+    .button-primary:active {
+      @apply bg-primary-main;
+    }
+  
+    .button-secondary {
+      @apply bg-secondary-main text-white;
+    }
+  
+    .button-secondary:hover {
+      @apply bg-secondary-main shadow-lg;
+    }
+  
+    .button-secondary:focus {
+      @apply bg-secondary-main shadow-lg;
+    }
+  
+    .button-secondary:active {
+      @apply bg-secondary-main shadow-lg;
+    }
+  
+    .button-tertiary {
+      @apply border-[1px] bg-white border-primary-main text-primary-main hover:bg-primary-main  focus:outline-none focus:ring-0 transition duration-150 ease-in-out;
+    }
+  
+    .alert {
+      @apply flex items-center px-3 py-3 mx-5 rounded-lg
+    }
+    .alert-success {
+      @apply bg-[#d5fde0] border border-green-400
+    }
+    .alert-error {
+      @apply bg-[#f7cbc8] border border-red-500
+    }
+    .alert-info {
+      @apply bg-[#B1E4BF]
+    }
+   /* sidebar */
+  .sidebar {
+    @apply fixed top-0 z-10 md:block hidden;
+  }
+
+  .sidebar-header {
+    @apply flex items-center flex-shrink-0;
+  }
+
+  .sidebar-content {
+    height: calc(100vh - 2rem - 81px - 50px);
+    overflow-y: auto;
+    @apply py-5;
+  }
+  
+    /* badge */
+    .badge {
+      @apply rounded-full h-[30px] text-gray-800 font-[500] text-[12px] px-2 inline-flex items-center;
+    }
+  
+    .badge-success {
+      @apply bg-primary-light;
+    }
+  
+    .badge-success-icon {
+      @apply bg-primary-main p-0.5;
+    }
+  
+    .badge-danger {
+      @apply bg-error-light;
+    }
+  
+    .badge-danger-icon {
+      @apply bg-error-main p-0.5;
+    }
+  
+    .badge-tertiary {
+      @apply bg-gray-300;
+    }
+  
+    .badge-tertiary-icon {
+      @apply bg-[#D8DADE] p-0.5;
+    }
+  
+    .badge-info {
+      @apply bg-blue-400;
+    }
+  
+    .badge-selected {
+      @apply bg-[#D99BFF];
+    }
+  
+    .badge-warning {
+      @apply bg-yellow-200;
+    }
+    /* dialog */
+  .modal {
+    z-index: 1055;
+  }
+
+  .modal-dialog {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-dialog-scrollable {
+    @apply max-h-[100%];
+    height: calc(100% - 1rem);
+  }
+
+  .modal-dialog-scrollable-body {
+    @apply overflow-y-auto relative max-h-[500px] px-10;
+  }
+
+  .modal-fullscreen {
+    width: 100%;
+  }
+
+  @media (min-width: 375px) {
+    .modal-dialog {
+      width: 300px;
+    }
+    .modal-dialog-scrollable {
+      height: calc(100% - 3.5rem);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .modal-dialog {
+      width: 500px;
+      margin: 1.75rem auto;
+    }
+  }
+  .Input {
+  }
+
+  .Input__input {
+    @apply bg-transparent flex-1 outline-none py-3;
+    min-width: 0px;
+  }
+
+  .InputScaffold {
+    @apply inline-block;
+  }
+
+  .InputScaffold--gutter-bottom {
+    @apply mb-4;
+  }
+
+  .InputScaffold--fullWidth {
+    @apply w-full block;
+  }
+
+  .InputScaffold__label {
+    @apply text-sm text-secondary-main block mb-1;
+  }
+
+  .InputScaffold__input {
+    @apply bg-white flex justify-center gap-2 text-secondary-main px-4 border border-gray-200 border-solid rounded-md;
+  }
+
+  .InputScaffold__input--small {
+    min-height: 40px;
+  }
+
+  .InputScaffold__input--medium {
+    min-height: 48px;
+  }
+  .InputScaffold__input--large {
+    min-height: 56px;
+  }
+
+  .InputScaffold__input:focus-within {
+    @apply ring-2 ring-inset ring-secondary-main;
+  }
+
+  .InputScaffold__input:focus-visible {
+    @apply ring-2 ring-inset ring-secondary-main;
+  }
+
+  /* select */
+  .Select {
+  }
+
+  .Select__select {
+    @apply bg-transparent flex-1 outline-none self-center;
+  }
+}  
